@@ -2,7 +2,7 @@ title: Title
 email: your-email@example.com
 description: by Authors
 
-baseurl: "/mindoc" # the subpath of your site. Change it if the name of your repository is other than "mindoc"
+baseurl: "/MinDoc" # the subpath of your site. Change it if the name of your repository is other than "mindoc"
 
 twitter_username: jekyllrb
 github_username:  jekyll
