@@ -1,7 +1,7 @@
 ---
 layout: default
-title: About Sourcelab
+title: About MinDoc
 number: 010
 ---
 
-# About Sourcelab
+# About MinDoc
