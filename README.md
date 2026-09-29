@@ -1,12 +1,25 @@
 # MinDoc: Create Your Own Digital Documentary Edition
 
 ## What is MinDoc?
-MinDoc is a minimal computing platform for creating your own digital documentary editions. It makes it easy to quickly deploy a simple static web page where you can display images and text about your project—no coding experience required. This template is designed for students, archivists, and researchers who want to publish digital editions online quickly and freely.
-
+MinDoc is a simple publishing template that can be used to create electronic editions of historical sources (texts, images, film). Inspired by the 'minimal computing' movement, it is aimed at anyone who is looking for a basic, open platform for sharing documents they have digitized. MinDoc makes it easy to develop a simple static web page where you can display and describe your materials, in a form that can be used by researchers, teachers, and the public at large. No coding experience is required (though you'll learn a few basic skills along the way). MinDoc is also designed to help you meet the Minimum Standards for Electronic Editions developed by the Association for Documentary Editing, so you'll know your readers have what they need to work with the material you're presenting. 
 
 ---
 
-## Getting Started
+## Key Concepts (Start Here if You're New)
+
+Before you begin, here are a few terms you'll see throughout this guide. You don't need any technical background, just a general sense of what these mean.
+
+**GitHub** is a free website where people store and share project files. Think of it as a combination of cloud storage and a publishing platform. You'll use it to hold your edition's files and to put your finished site online, all for free.
+
+**Repository (or "repo")** is the name for a single project on GitHub. It's essentially a folder that holds all the files for your edition, your text, images, and settings, in one place. When you make your own copy of MinDoc, you're creating your own repository.
+
+**Static web page** is the kind of website MinDoc creates. "Static" means the pages are built ahead of time and simply displayed to visitors, rather than changing on the fly. This is exactly what a digital edition needs, and it's why the site can be hosted for free and load quickly.
+
+**GitHub Pages** is the GitHub feature that turns your repository into a live website on the internet. Once you turn it on, GitHub takes the files in your repo and publishes them at a web address you can share. This is the step that makes your edition public.
+
+---
+
+## Getting Started with MinDoc on GitHub
 
 This guide assumes you have **no prior GitHub experience**. If you're already familiar with GitHub, feel free to skip ahead. Typical technical information will be found below.
 
@@ -14,6 +27,9 @@ This guide assumes you have **no prior GitHub experience**. If you're already fa
 Sign up for a free GitHub account at [github.com](https://github.com) by selecting the **Sign Up** button at the top of the page.
 
 ### Step 2: Create Your Own Copy of MinDoc
+
+A **template** is a ready-made starting point. MinDoc is set up as a template repository, which means you can create your own complete copy of it with a single click, then change it however you like without affecting the original.
+
 1. Scroll to the top of the MinDoc template repository
 2. Find the **"Use this template"** button (it looks like this):
 
@@ -30,6 +46,9 @@ You should now have your own copy of MinDoc attached to your GitHub account. You
 <img width="356" height="336" alt="Newly created repository" src="https://github.com/user-attachments/assets/d8e095ca-4534-4730-82e2-0e467fc3ec93" />
 
 ### Step 5: Enable GitHub Pages
+
+A **branch** is a version of your repository's files. Every repository starts with one main branch (called "Main"), which holds the official, current version of your project. For MinDoc, you'll simply publish your site from this Main branch.
+
 1. Go to your new repository's **Settings** tab
 2. Select **"Pages"** from the left menu
 3. Under "Build and deployment," select **"Deploy from a branch"**
