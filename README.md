@@ -40,6 +40,8 @@ A **template** is a ready-made starting point. MinDoc is set up as a template re
 ### Step 3: Name Your Repository
 Choose a simple, descriptive name for your repository. The name you choose will become part of your website's URL so you might want to use a version of your publication's title. (e.g., `the-correspondance-of-george-washington-yyyy-yyyy`, `The-Epistolary-Presidency`, `scenes-from-mount-vernon`). A clear name helps others understand what your project contains. Repository names have some restrictions that might prevent you from using your publication's full title or using the exact title. It is possible to change the repository name later. 
 
+MinDoc also uses this repository name automatically to build your site's web address, so you won't need to configure the address yourself later.
+
 ### Step 4: Click "Create Repository"
 You should now have your own copy of MinDoc attached to your GitHub account. You'll see a screen like this:
 
@@ -69,6 +71,8 @@ title: Your Document Title
 description: by Your Name
 ```
 These yaml fields will modify the title and description fields on your web page.
+
+**Note:** You do **not** need to edit the `baseurl` setting in this file. MinDoc automatically uses your repository's name to build your site's web address, so leaving `baseurl` empty is correct for almost everyone. (Advanced users who need a custom address can set it manually, but this is rarely necessary.)
 
 ### Add Your Main Content
 **File:** `index.markdown`
@@ -154,6 +158,7 @@ The first line sets up the ability to call images into the page. It can go anywh
 - Check that image filenames match exactly in your `.md` files
 - Verify images are in the `assets/img/` folder
 - Check your liquid code. The second line brings in the actual using the order value in the file metadata. The first line sets this process up. The first line can go anywhere as long as it is before you try calling in an image.
+- You should **not** need to change the `baseurl` setting in `_config.yml`. MinDoc sets your site's web address automatically, so an empty `baseurl` is correct. Only change it if you intentionally need a custom address.
 
 **Q: How do I make edits after publishing?**
 - Edit files directly in GitHub by clicking the pencil icon
