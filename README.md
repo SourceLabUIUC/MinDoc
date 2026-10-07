@@ -60,7 +60,7 @@ A **branch** is a version of your repository's files. Every repository starts wi
 
 ---
 
-## How to Use MinDocMini
+## How to Use MinDoc
 
 ### Edit Your Site Title and Description
 **File:** `_config.yml`
