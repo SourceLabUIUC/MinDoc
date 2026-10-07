@@ -1,14 +1,15 @@
 ---
 layout: default
 ---
+  {%- assign base_path = site.baseurl | default: site.github.baseurl -%}
   <body>
     <div class="img_description">
       <div class="image">
         {% if page.media_type == 'image' %}
-        <img src="{% if page._path contains 'assets' %} {{ site.baseurl }}{{ page._path }} {% else %} {{ page._path }} {% endif %}">
+        <img src="{% if page._path contains 'assets' %} {{ base_path }}{{ page._path }} {% else %} {{ page._path }} {% endif %}">
         {% else %}
         <iframe
-        src="{% if page._path contains 'assets' %} {{ page.baseurl }}{{ page._path }} {% else %} {{ page._path }} {% endif %}" class="page_image"></iframe>
+        src="{% if page._path contains 'assets' %} {{ base_path }}{{ page._path }} {% else %} {{ page._path }} {% endif %}" class="page_image"></iframe>
         {% endif %}
       </div>
       <div class="text">

@@ -6,6 +6,7 @@ Usage example in a page:
   {% include media_next.html pages=media %}  <-- drops the next one here
 {%- endcomment -%}
 
+{%- assign base_path = site.baseurl | default: site.github.baseurl -%}
 {%- assign media = include.pages | default: empty -%}
 {%- if media and media.size > 0 -%}
 
@@ -25,29 +26,25 @@ Usage example in a page:
         {%- if element.media_type == 'image' -%}
           <div class="container">
             <img
-              src="{% if element._path contains 'assets' %}{{ site.baseurl }}{{ element._path }}{% else %}{{ element._path }}{% endif %}"
+              src="{% if element._path contains 'assets' %}{{ base_path }}{{ element._path }}{% else %}{{ element._path }}{% endif %}"
               class="page_image">
-            <div>
-              <div class="description-wrapper">
-                <p>Title: {{ element._title }}<br>
-                Creator: {{ element.creator }}<br>
-                Date: {{ element._date }}</p>
-                <a href="{{ site.baseurl }}{{ element.url }}"><button class="description_btn">Detailed description</button></a>
-              </div>
+            <div class="description-wrapper">
+              <p class="media-caption">Title: {{ element._title }}<br>
+              Creator: {{ element.creator }}<br>
+              Date: {{ element._date }}</p>
+              <a class="description_btn" href="{{ base_path }}{{ element.url }}">Detailed description</a>
             </div>
           </div>
         {%- else -%}
           <div class="container">
             <iframe
-              src="{% if element._path contains 'assets' %}{{ site.baseurl }}{{ element._path }}{% else %}{{ element._path }}{% endif %}"
+              src="{% if element._path contains 'assets' %}{{ base_path }}{{ element._path }}{% else %}{{ element._path }}{% endif %}"
               class="page_image"></iframe>
-            <div>
-              <div class="description-wrapper">
-                <p>Title: {{ element._title }}<br>
-                Creator: {{ element.creator }}<br>
-                Date: {{ element._date }}</p>
-                <a href="{{ site.baseurl }}{{ element.url }}"><button class="description_btn">Detailed description</button></a>
-              </div>
+            <div class="description-wrapper">
+              <p class="media-caption">Title: {{ element._title }}<br>
+              Creator: {{ element.creator }}<br>
+              Date: {{ element._date }}</p>
+              <a class="description_btn" href="{{ base_path }}{{ element.url }}">Detailed description</a>
             </div>
           </div>
         {%- endif -%}

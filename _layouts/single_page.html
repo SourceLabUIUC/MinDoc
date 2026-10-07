@@ -1,8 +1,14 @@
+{%- comment -%}
+  Resolve the site's base path. If `baseurl` is set in _config.yml it wins;
+  otherwise fall back to the value GitHub Pages computes from the repo name
+  (site.github.baseurl). See README "Technical Information" for local notes.
+{%- endcomment -%}
+{%- assign base_path = site.baseurl | default: site.github.baseurl -%}
 <html>
     <head>
         <meta charset = "UTF-8">
         <title>{{ site.title }}</title>
-        <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+        <link rel="stylesheet" href="{{ base_path }}/assets/css/styles.css">
     </head>
     <body>
         {% include header.html %}
