@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 // Basic
 
 body, html {
   height: 100%;
   margin: 0;
-  font-family: "Oswald";
+  font-family: "Gentium Book Plus", serif;
 }
 
 // Header
@@ -19,7 +20,7 @@ body, html {
 }
 
 .header h1 {
-  font-family: "Calibri";
+  font-family: "Gentium Book Plus", serif;
   font-size: 48px;
   color: #476345;
   margin-bottom: 10px;
@@ -27,7 +28,7 @@ body, html {
 }
 
 .header p {
-  font-family: "Calibri";
+  font-family: "Gentium Book Plus", serif;
   font-size: 24px;
   color: #666;
   margin-top: 0;
@@ -41,7 +42,7 @@ body, html {
 // Single Page Layout
 
 .single-page-content {
-  max-width: 800px;
+  max-width: 680px;
   margin: 0 auto;
   padding: 0 20px 40px 20px;
 }
@@ -53,7 +54,7 @@ body, html {
 // Content
 
 p {
-  font-family: "Oswald";
+  font-family: "Gentium Book Plus", serif;
   font-size: 21px;
 }
 
@@ -64,14 +65,14 @@ p {
 
 a {
   color:#476345;
-  font-family: "Oswald";  
+  font-family: "Gentium Book Plus", serif;  
   text-decoration: none !important;
 }
 
 // Content sections
 
 h1 {
-  font-family: "Oswald";
+  font-family: "Gentium Book Plus", serif;
   color: #476345;
   margin-top: 50px;
   margin-bottom: 20px;
@@ -97,8 +98,8 @@ img.page_image{
 }
 
 .container{
-  height: 500px;
-  margin-bottom:150px;
+  min-height: 500px;
+  margin-bottom: 60px;
 }
 
 .main-wrap {
@@ -109,13 +110,37 @@ img.page_image{
 }
 
 .description-wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
-  width: 450px;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 450px;
+  margin: 20px auto 0 auto;
+}
 
-  // grid-gap: 20px;
+.media-caption {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #444;
+  margin: 0 0 16px 0;
+}
+
+.description_btn {
+  display: inline-block;
+  font-family: "Gentium Book Plus", serif;
+  font-size: 15px;
+  color: #476345 !important;
+  background: transparent;
+  border: 1px solid #476345;
+  border-radius: 4px;
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.description_btn:hover {
+  background: #476345;
+  color: #fff !important;
 }
 
 // .dropdown {

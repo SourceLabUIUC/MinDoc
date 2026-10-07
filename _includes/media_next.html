@@ -28,13 +28,11 @@ Usage example in a page:
             <img
               src="{% if element._path contains 'assets' %}{{ base_path }}{{ element._path }}{% else %}{{ element._path }}{% endif %}"
               class="page_image">
-            <div>
-              <div class="description-wrapper">
-                <p>Title: {{ element._title }}<br>
-                Creator: {{ element.creator }}<br>
-                Date: {{ element._date }}</p>
-                <a href="{{ base_path }}{{ element.url }}"><button class="description_btn">Detailed description</button></a>
-              </div>
+            <div class="description-wrapper">
+              <p class="media-caption">Title: {{ element._title }}<br>
+              Creator: {{ element.creator }}<br>
+              Date: {{ element._date }}</p>
+              <a class="description_btn" href="{{ base_path }}{{ element.url }}">Detailed description</a>
             </div>
           </div>
         {%- else -%}
@@ -42,13 +40,11 @@ Usage example in a page:
             <iframe
               src="{% if element._path contains 'assets' %}{{ base_path }}{{ element._path }}{% else %}{{ element._path }}{% endif %}"
               class="page_image"></iframe>
-            <div>
-              <div class="description-wrapper">
-                <p>Title: {{ element._title }}<br>
-                Creator: {{ element.creator }}<br>
-                Date: {{ element._date }}</p>
-                <a href="{{ base_path }}{{ element.url }}"><button class="description_btn">Detailed description</button></a>
-              </div>
+            <div class="description-wrapper">
+              <p class="media-caption">Title: {{ element._title }}<br>
+              Creator: {{ element.creator }}<br>
+              Date: {{ element._date }}</p>
+              <a class="description_btn" href="{{ base_path }}{{ element.url }}">Detailed description</a>
             </div>
           </div>
         {%- endif -%}
